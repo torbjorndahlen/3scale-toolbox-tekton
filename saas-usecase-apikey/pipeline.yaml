@@ -22,7 +22,6 @@ spec:
       default: api
     - name: secretName
       description: Name of the secret containing the 3scale_toolbox remotes list
-      default: 3scale-toolbox
   steps:
   - name: import-openapi
     image: quay.io/redhat/3scale-toolbox
@@ -45,7 +44,7 @@ spec:
   volumes:
   - name: toolbox-config
     secret:
-      secretName: ${inputs.params.secretName}
+      secretName: 3scale-toolbox
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: Task
