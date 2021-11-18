@@ -44,7 +44,7 @@ spec:
   volumes:
   - name: toolbox-config
     secret:
-      secretName: 3scale-toolbox
+      secretName: ${inputs.params.secretName}
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: Task
